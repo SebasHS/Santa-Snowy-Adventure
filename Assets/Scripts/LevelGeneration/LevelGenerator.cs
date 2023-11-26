@@ -22,7 +22,7 @@ public class LevelGenerator : MonoBehaviour
     }
     private void SpawnTerreno(GameObject terreno, Vector3 position)
     {
-        Instantiate(terreno);
+        Instantiate(terreno,transform);
         terreno.transform.position = position;
     }
 }
