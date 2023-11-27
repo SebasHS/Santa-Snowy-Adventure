@@ -6,23 +6,32 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject Terreno;
     private float index = 0;
+    float yNewPosition = -100.5f;
+    float xNewPosition = -300;
 
 
     private void Awake()
     {
         //Aparecer los terrenos iniciales
         SpawnTerreno(Terreno, new Vector3(0, 0, 0));
-        SpawnTerreno(Terreno, new Vector3(-300, -100, 0));
+        //SpawnTerreno(Terreno, new Vector3(-300, -100, 0));
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(transform.position.x >= index)
+        {
+            Debug.Log("crear terreno");
+            SpawnTerreno(Terreno, new Vector3(-299.5f,yNewPosition,0));
+            index += 300;
+            xNewPosition -= 300;
+            yNewPosition -= 100.5f;
+        }
     }
     private void SpawnTerreno(GameObject terreno, Vector3 position)
     {
-        Instantiate(terreno,transform);
-        terreno.transform.position = position;
+        GameObject terrenoCreado = Instantiate(terreno,transform);
+        terrenoCreado.transform.position = position;
     }
 }
