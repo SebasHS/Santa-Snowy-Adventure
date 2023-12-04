@@ -1906,6 +1906,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9220662816736678790, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7a9eb374d536a948bdde57c30727e54, type: 2}
+    - target: {fileID: -8752562027677821960, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca02c5a3f833ff84da2b5b35f7632469, type: 2}
     - target: {fileID: -8679921383154817045, guid: e7ac6e81b33c743b0a272ef7665bcf49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1956,6 +1966,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7201315277907223380, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af37577915116354ca4bbf917159c055, type: 2}
+    - target: {fileID: -4921809425027431214, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e9460dbd16405c4fa0864a9e7f48685, type: 2}
+    - target: {fileID: -3039839291243079742, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 210115c5757ee6249969e6f9b40e7168, type: 2}
+    - target: {fileID: -2506375812328947127, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65cd0ccb9eb7c0f4181b82cdccbfdc82, type: 2}
+    - target: {fileID: 913195507962181464, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65cd0ccb9eb7c0f4181b82cdccbfdc82, type: 2}
     - target: {fileID: 919132149155446097, guid: e7ac6e81b33c743b0a272ef7665bcf49,
         type: 3}
       propertyPath: m_Name
@@ -1969,15 +2004,18 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: e7ac6e81b33c743b0a272ef7665bcf49,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Left Strafe'\n\tFrom
-        animation clip 'Left Strafe'"
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7081506131828659653, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: be7db5c7c84d81f40aca3b0ece97b54c, type: 2}
+    - target: {fileID: 8498781659405204274, guid: e7ac6e81b33c743b0a272ef7665bcf49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af37577915116354ca4bbf917159c055, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2603,15 +2641,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475370, guid: 16c35d0a64930784b95e900d6aa9f8ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.88100004
+      value: -3.881
       objectReference: {fileID: 0}
     - target: {fileID: 475370, guid: 16c35d0a64930784b95e900d6aa9f8ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: .497000009
+      value: 0.497
       objectReference: {fileID: 0}
     - target: {fileID: 475370, guid: 16c35d0a64930784b95e900d6aa9f8ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.57299995
+      value: -3.573
       objectReference: {fileID: 0}
     - target: {fileID: 475370, guid: 16c35d0a64930784b95e900d6aa9f8ce, type: 3}
       propertyPath: m_LocalRotation.w
