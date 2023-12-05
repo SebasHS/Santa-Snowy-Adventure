@@ -12,7 +12,7 @@ public class moveMountains : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        //Este codigo se encarga de mover las montañas del prefab
+        //Este codigo se encarga de mover las montaï¿½as del prefab
         Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position +  forwardMove);
     }
