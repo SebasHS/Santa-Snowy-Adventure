@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpawnToys : MonoBehaviour
 {
-    [SerializeField] private float SpawnCooldown = 7f;
-    private float canSpawn = -1f;
-    [SerializeField] private int cantidad = 1;
+    //[SerializeField] private float SpawnCooldown = 7f;
+    //private float canSpawn = -1f;
+    //[SerializeField] private int cantidad = 1;
     [SerializeField] private GameObject toy1;
     [SerializeField] private GameObject toy2;
     [SerializeField] private GameObject toy3;
@@ -39,7 +39,6 @@ public class SpawnToys : MonoBehaviour
     void Spawner()
     {
         int rand = UnityEngine.Random.Range(1, 5);
-        Debug.Log("Rand: " + rand);
         switch (rand)
         {
             case 1:
@@ -60,10 +59,10 @@ public class SpawnToys : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         Vector3 vex = new Vector3(x, y, z);
         transform.Translate(vex * speed * Time.deltaTime);
         //transform.Translate(x, y, z);
-    }
+    }*/
 }

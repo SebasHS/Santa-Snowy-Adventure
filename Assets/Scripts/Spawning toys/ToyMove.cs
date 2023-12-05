@@ -18,14 +18,25 @@ public class ToyMove : MonoBehaviour
     /*Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
     rb.MovePosition(rb.position +  forwardMove);*/
     //Vector3 vex = new Vector3(x, y, z) ;
-    Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
-    transform.Translate(forwardMove * speed * Time.deltaTime);
+
     //transform.Translate(x, y, z);
 
   }
+  void Update()
+  {
+    Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
+    transform.Translate(forwardMove * speed * Time.deltaTime);
+    Debug.Log("Toy move");
+  }
+
   void OnTriggerEnter(Collider collision)
   {
-    Debug.Log("Entra: "+ collision.name);
-    ToyManager.Instance.QuitardeLista(this.name);
+    if (collision.name == "Santa")
+    {
+      Debug.Log("Entra: " + this.name);
+      ToyManager.Instance.QuitardeLista(this.name);
+      Debug.Log("Destroy -----> " + this.name);
+      Destroy(gameObject);
+    }
   }
 }
