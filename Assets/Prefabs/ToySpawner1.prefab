@@ -47,6 +47,9 @@ MonoBehaviour:
   SpawnCooldown: 7
   cantidad: 1
   toy1: {fileID: 1740381525806329803, guid: b056985559477774d9f676dcb9fdf8bc, type: 3}
+  toy2: {fileID: 1740381525806329803, guid: 48d219913dab22c458b557f72dce236e, type: 3}
+  toy3: {fileID: 1740381525806329803, guid: b056985559477774d9f676dcb9fdf8bc, type: 3}
+  toy4: {fileID: 1740381525806329803, guid: c3653b7e6b2aa294bbb31a15e9063d39, type: 3}
   x: 0
   y: 0
   z: 0
