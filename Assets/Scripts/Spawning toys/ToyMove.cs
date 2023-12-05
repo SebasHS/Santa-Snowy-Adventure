@@ -23,9 +23,9 @@ public class ToyMove : MonoBehaviour
     //transform.Translate(x, y, z);
 
   }
-  void OnCollisionEnter(Collision collision)
+  void OnTriggerEnter(Collider collision)
   {
-    Debug.Log("Entra: "+ collision.collider.name);
+    Debug.Log("Entra: "+ collision.name);
     ToyManager.Instance.QuitardeLista(this.name);
   }
 }
