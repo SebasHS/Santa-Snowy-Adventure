@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToyManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ToyManager : MonoBehaviour
     public List<string> listaPorObtener = new List<string>();
     public int nivel = 0;
     public int vida = 3;
+    public Image[] hearts;
+    public Sprite fullHeart;
 
     public AudioSource hurt;
     public AudioSource getGift;
@@ -36,7 +39,18 @@ public class ToyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < vida)
+            {
+                hearts[i].sprite = fullHeart;
+                hearts[i].color = new Color32(255, 255, 225, 255);
+            }
+            else
+            {
+                hearts[i].color = new Color32(255, 255, 225, 0);
+            }
+        }
     }
 
 
@@ -93,6 +107,7 @@ public class ToyManager : MonoBehaviour
     {
         hurt.Play();
         vida--;
+       
         if(vida == 0)
         {
             //ANGELO AQUI PANTALLA DE MUERTE
