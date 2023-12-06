@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ToyManager : MonoBehaviour
@@ -9,6 +10,13 @@ public class ToyManager : MonoBehaviour
     public List<string> listaPorObtener = new List<string>();
     public int nivel = 0;
     public int vida = 3;
+
+    public AudioSource hurt;
+    public AudioSource getGift;
+    public AudioSource EatCookie;
+    public AudioSource nextLevel;
+     
+    
 
     public static ToyManager Instance { get; private set; }
     private void Awake()
@@ -32,14 +40,15 @@ public class ToyManager : MonoBehaviour
     public void nextNivel()
     {
         nivel++;
+        nextLevel.Play();
         listaObtenida.Clear();
         switch (nivel)
         {
             case 1:
-                listaPorObtener = new List<string> { "ToyBall(Clone)", "ToyBall(Clone)", "ToySkate(Clone)", "ToyBear(Clone)" };
+                listaPorObtener = new List<string> { "ToyBall", "ToyBall", "ToySkate", "ToyBear" };
                 break;
             case 2:
-                listaPorObtener = new List<string> { "ToySkate(Clone)", "ToyBear(Clone)", "ToySkate(Clone)", "ToyBear(Clone)", "ToyBall(Clone)" };
+                listaPorObtener = new List<string> { "ToySkate", "ToyBear", "ToySkate", "ToyBear", "ToyBall" };
                 break;
             default:
                 break;
@@ -48,6 +57,7 @@ public class ToyManager : MonoBehaviour
 
     public void QuitardeLista(string toy)
     {
+        getGift.Play();
         if (listaPorObtener.Contains(toy))
         {
             Debug.Log("Grabbed: " + toy);
@@ -63,6 +73,7 @@ public class ToyManager : MonoBehaviour
 
     public void OneUP()
     {
+        EatCookie.Play();
         if(vida < 3)
         {
             vida++;
@@ -71,6 +82,7 @@ public class ToyManager : MonoBehaviour
 
     public void gotHit()
     {
+        hurt.Play();
         vida--;
         if(vida == 0)
         {

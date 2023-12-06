@@ -9,15 +9,7 @@ public class ToyMove : MonoBehaviour
   [SerializeField] public int x, y, z;
   void Start()
   {
-    if(this.name == "Cookie")
-    {
-      Debug.Log("Less speed: Cookie");
-      speed = 0;
-    }
-    else
-    {
-      speed = 27;
-    }
+
   }
 
   private void FixedUpdate()
@@ -32,9 +24,9 @@ public class ToyMove : MonoBehaviour
   }
   void Update()
   {
-    Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
+    /*Vector3 forwardMove = transform.right * speed * Time.fixedDeltaTime;
     transform.Translate(forwardMove * speed * Time.deltaTime);
-    Debug.Log("Toy move");
+    Debug.Log("Toy move");*/
   }
 
   void OnTriggerEnter(Collider collision)
