@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19222927, g: 0.29714447, b: 0.3759185, a: 1}
+  m_IndirectSpecularColor: {r: 0.19222572, g: 0.2971152, b: 0.37576038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2023,6 +2023,8 @@ GameObject:
   - component: {fileID: 543945114}
   - component: {fileID: 543945118}
   - component: {fileID: 543945115}
+  - component: {fileID: 543945116}
+  - component: {fileID: 543945117}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -4080,7 +4082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1093266273
 Transform:
   m_ObjectHideFlags: 0
@@ -5863,7 +5865,6 @@ MonoBehaviour:
   grinchHealth: 0
   miniStorms: []
   santa: {fileID: 2099657825}
-  sceneNum: 0
   deathCanvas: {fileID: 629255157}
 --- !u!4 &2029612040
 Transform:

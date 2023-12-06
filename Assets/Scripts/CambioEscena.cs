@@ -8,7 +8,7 @@ public class CambioEscena : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("CambiarEscena", 5f);
+        Invoke("CambiarEscena", 10f);
     }
 
     // Update is called once per frame
@@ -19,6 +19,6 @@ public class CambioEscena : MonoBehaviour
     void CambiarEscena()
     {
         // Cambia a la escena llamada "SampleScene".
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MenuScene");
     }
 }

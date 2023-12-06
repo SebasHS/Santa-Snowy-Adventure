@@ -34,22 +34,13 @@ public class InGameUIManager : MonoBehaviour
     }
     public void TacharRegaloUI(string regaloRecogido)
     {
-        string gax ="";
-        foreach (var regalo in RegalosRecoger)
-        {
-           gax +=  regalo + ",";
-        }
-        Debug.Log(gax);
-        Debug.Log(regaloRecogido);
-        Debug.Log(RegalosRecoger.Contains(regaloRecogido)); 
+    
         if (RegalosRecoger.Contains(regaloRecogido)){
         int index = RegalosRecoger.IndexOf(regaloRecogido);
-        Debug.Log(index);
-        Debug.Log(RegalosRecoger[index]);
         if (index != -1)
         {
-           // RegalosRecoger[index] = "R" + RegalosRecoger[index];
-            Debug.Log(RegalosRecoger[index]);
+            //RegalosRecoger[index] = "R" + RegalosRecoger[index];
+            //RegalosRecoger.Remove(regaloRecogido);
             writeRegalos();
         }}
 
@@ -57,12 +48,6 @@ public class InGameUIManager : MonoBehaviour
     public void getRegalos(List<string> regalos)
     {
         RegalosRecoger = regalos;
-        string gax ="";
-        foreach (var regalo in RegalosRecoger)
-        {
-           gax +=  regalo + ",";
-        }
-Debug.Log(gax);
     }
     public void writeRegalos()
     {
