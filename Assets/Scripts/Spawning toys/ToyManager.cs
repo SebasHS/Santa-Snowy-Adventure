@@ -23,6 +23,8 @@ public class ToyManager : MonoBehaviour
     public GameObject CanvasUI;
 
     public int grinchHealth;
+
+    public Animator santa;
     
 
     public static ToyManager Instance { get; private set; }
@@ -105,6 +107,7 @@ public class ToyManager : MonoBehaviour
 
     public void gotHit()
     {
+        santa.SetBool("IsFalling", true);
         hurt.Play();
         vida--;
        
@@ -113,7 +116,16 @@ public class ToyManager : MonoBehaviour
             //ANGELO AQUI PANTALLA DE MUERTE
             Debug.Log("Death");
         }
+        StartCoroutine(DesFall());
     }
 
-
+    
+    private IEnumerator DesFall()
+    {
+        yield return new WaitForSeconds(0.5f);
+        santa.SetBool("IsFalling", false);
+        santa.SetBool("IsRecovering", true);
+        yield return new WaitForSeconds(1.0f);
+        santa.SetBool("IsRecovering", false);
+    }
 }
