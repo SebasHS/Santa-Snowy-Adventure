@@ -19,14 +19,14 @@ public class PlayerMovement : MonoBehaviour
     public Animator santa;
 
     public AudioSource bg;
+    public AudioSource throwSound;
 
-    
 
-    
     //
     
 
 
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -60,9 +60,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnFire(InputValue value)
     {
         // Acceder al Animator y establecer el parámetro IsThrowing a true
+        throwSound.Play();
         santa.SetBool("IsThrowing", true);
         StartCoroutine(ResetThrowingParameter(0.7f));
         StartCoroutine(ThrowBall());
+        throwSound.Play();
     }
     private IEnumerator ResetThrowingParameter(float tiempo)
     {
