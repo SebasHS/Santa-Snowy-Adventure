@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-
+using UnityEngine.SceneManagement; 
 
 public class ToyManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<string> listaObtenida = new List<string>();
     public List<string> listaPorObtener = new List<string>();
+
     public int nivel = 0;
     public int vida = 3;
     public Image[] hearts;
@@ -30,11 +29,8 @@ public class ToyManager : MonoBehaviour
 
 
     public Animator santa;
-
-    public int sceneNum;
-
-    private bool esperandoVictoria = false;
     
+    [SerializeField] private GameObject deathCanvas;
 
     public static ToyManager Instance { get; private set; }
     private void Awake()
@@ -46,7 +42,6 @@ public class ToyManager : MonoBehaviour
     void Start()
     {
         StormDisable();
-        //Debug.Log("NIVEL: "+nivel);
     }
 
     // Update is called once per frame
@@ -115,21 +110,16 @@ public class ToyManager : MonoBehaviour
         if (listaPorObtener.Contains(toy))
         {
             Debug.Log("Grabbed: " + toy);
+            CanvasUI.GetComponent<InGameUIManager>().TacharRegaloUI(toy);
             listaPorObtener.Remove(toy);
             listaObtenida.Add(toy);
         }
         if (listaPorObtener.Count == 0 && nivel != 3)
         {
             Debug.Log("Next level!");
-            //Cambiar a VictoryScene, esta debe estar durante 5 segundos y luego se debe volver a esta escena actual 
-            //nextNivel();
-            //EsperaParaVictoria(2.0f);
-            //StartCoroutine(TransicionVictoria(2.0f));
             nextNivel();
         }
     }
-
-
 
     public void OneUP()
     {
@@ -145,13 +135,24 @@ public class ToyManager : MonoBehaviour
         santa.SetBool("IsFalling", true);
         hurt.Play();
         vida--;
+        Debug.Log("Vida actual: " + vida); 
 
         if (vida == 0)
         {
-            //ANGELO AQUI PANTALLA DE MUERTE
+            Debug.Log("Death - Activando canvas de muerte");
+            deathCanvas.SetActive(true); 
+            Time.timeScale = 0;
+            StartCoroutine(WaitAndLoadMenu());
             Debug.Log("Death");
         }
         StartCoroutine(DesFall());
+    }
+
+    private IEnumerator WaitAndLoadMenu()
+    {
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(5); // Espera 5 segundos
+        SceneManager.LoadScene("MenuScene"); // Cambia a la escena del menú principal
     }
 
     
@@ -163,5 +164,4 @@ public class ToyManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         santa.SetBool("IsRecovering", false);
     }
-    
 }
