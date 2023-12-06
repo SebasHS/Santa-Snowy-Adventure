@@ -17,6 +17,7 @@ public class ToyManager : MonoBehaviour
     public AudioSource nextLevel;
      
     public GameObject grinch;
+    public GameObject CanvasUI;
 
     public int grinchHealth;
     
@@ -60,6 +61,7 @@ public class ToyManager : MonoBehaviour
             default:
                 break;
         }
+        CanvasUI.GetComponent<InGameUIManager>().LoadLevelUI();
     }
 
     public void QuitardeLista(string toy)
