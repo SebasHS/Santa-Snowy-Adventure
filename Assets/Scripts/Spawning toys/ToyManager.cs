@@ -85,6 +85,7 @@ public class ToyManager : MonoBehaviour
         {
             case 1:
                 listaPorObtener = new List<string> { "ToyBall", "ToyBall", "ToySkate", "ToyBear" };
+                CanvasUI.GetComponent<InGameUIManager>().LoadRegalosUI( listaPorObtener);
                 break;
             case 2:
                 listaPorObtener = new List<string> { "ToySkate", "ToyBear", "ToySkate", "ToyBear", "ToyBall" };

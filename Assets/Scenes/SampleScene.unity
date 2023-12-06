@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19221427, g: 0.29710746, b: 0.37575862, a: 1}
+  m_IndirectSpecularColor: {r: 0.19222572, g: 0.2971152, b: 0.37576038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20.8}
-  m_SizeDelta: {x: 152.98743, y: 45.5}
+  m_AnchoredPosition: {x: 395.36816, y: -227.14674}
+  m_SizeDelta: {x: 137.7438, y: 334.2632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109982231
 MonoBehaviour:
@@ -218,7 +218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &131665905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,8 +351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.1229, y: 0}
-  m_SizeDelta: {x: 149.7543, y: 50}
+  m_AnchoredPosition: {x: -0.001091, y: -0.00028229}
+  m_SizeDelta: {x: 137.75, y: 334.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &188268488
 MonoBehaviour:
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: 'Regalos:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 98d8c7d35354b43d09da0d641d97f1bc, type: 2}
   m_sharedMaterial: {fileID: 4992383411071324068, guid: 98d8c7d35354b43d09da0d641d97f1bc,
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.25
+  m_fontSize: 44.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.212471, y: 3.8824062, z: 41.42689, w: 3.311674}
+  m_margin: {x: 1.473443, y: 3.8824062, z: 0.055347387, w: 3.311674}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1004,7 +1004,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.23186599, y: 0.64131147, z: -0.21246608, w: -0.6998685}
-  m_LocalPosition: {x: 300.90527, y: 105.970665, z: 26.46116}
+  m_LocalPosition: {x: 297.87024, y: 103.65518, z: 26.273266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2274,7 +2274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLevel: {fileID: 1379005892}
-  currentLevel: 1
+  textRegalos: {fileID: 188268488}
 --- !u!1 &726307359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,7 +3315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_TrackedObjectOffset: {x: -0.4, y: 0, z: -0.3}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 10
+  m_CameraDistance: 6
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -4138,7 +4138,7 @@ Transform:
   m_GameObject: {fileID: 1449558758}
   serializedVersion: 2
   m_LocalRotation: {x: -0.23186599, y: 0.64131147, z: -0.21246608, w: -0.6998685}
-  m_LocalPosition: {x: 300.90527, y: 105.970665, z: 26.46116}
+  m_LocalPosition: {x: 297.87024, y: 103.65518, z: 26.273266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
