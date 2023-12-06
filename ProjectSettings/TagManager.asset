@@ -9,6 +9,9 @@ TagManager:
   - Obstacles
   - Toys
   - Grinch
+  - Terrain
+  - Storm
+  - errores
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Terreno
-  - 
+  - truenos
   - 
   - 
   - 

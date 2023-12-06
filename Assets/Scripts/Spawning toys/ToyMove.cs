@@ -31,7 +31,7 @@ public class ToyMove : MonoBehaviour
 
   void OnTriggerEnter(Collider collision)
   {
-    if(this.name == "Cookie")
+    if(this.name == "Cookie" && collision.name == "Santa")
     {
       Debug.Log("Cookie - 1UP");
       ToyManager.Instance.OneUP();
