@@ -14,6 +14,11 @@ public class LevelGenerator : MonoBehaviour
     {
         //Aparecer los terrenos iniciales
         SpawnTerreno(Terreno, new Vector3(0, 0, 0));
+        errors = GameObject.FindGameObjectsWithTag("errores");
+        for (int i = 0; i < errors.Length; i++)
+        {
+            errors[i].SetActive(false);
+        }
         //SpawnTerreno(Terreno, new Vector3(-300, -100, 0));
     }
 
@@ -36,18 +41,21 @@ public class LevelGenerator : MonoBehaviour
             {
                 ToyManager.Instance.StormEnable();
             }
+            //errors = GameObject.FindGameObjectsWithTag("errores");
+            /*Debug.Log("Errors: " + errors);
+            for (int i = 0; i < errors.Length; i++)
+            {
+                errors[i].SetActive(true);
+            }*/
+
         }
     }
     private void SpawnTerreno(GameObject terreno, Vector3 position)
     {
         GameObject terrenoCreado = Instantiate(terreno, transform);
         terrenoCreado.transform.position = position;
-        errors = GameObject.FindGameObjectsWithTag("errores");
-        for (int i = 0; i < errors.Length; i++)
-        {
-            errors[i].SetActive(false);        
-        }
-    
+        
+
         //Debug.Log("Nivel generate: " + ToyManager.Instance.nivel);
         /**/
     }
