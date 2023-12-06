@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
     float yNewPosition = -100.5f;
     float xNewPosition = -300;
 
-
+    public GameObject[] errors;
     private void Awake()
     {
         //Aparecer los terrenos iniciales
@@ -42,6 +42,12 @@ public class LevelGenerator : MonoBehaviour
     {
         GameObject terrenoCreado = Instantiate(terreno, transform);
         terrenoCreado.transform.position = position;
+        errors = GameObject.FindGameObjectsWithTag("errores");
+        for (int i = 0; i < errors.Length; i++)
+        {
+            errors[i].SetActive(false);        
+        }
+    
         //Debug.Log("Nivel generate: " + ToyManager.Instance.nivel);
         /**/
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.19221427, g: 0.29710746, b: 0.37575862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3064,6 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Terreno: {fileID: 5428091216498649589, guid: 0ab856ab0c3dbf840b0272dca2de03de, type: 3}
+  errors: []
 --- !u!4 &986440464
 Transform:
   m_ObjectHideFlags: 0
@@ -5199,9 +5200,8 @@ MonoBehaviour:
   grinch: {fileID: 1093266272}
   CanvasUI: {fileID: 715600409}
   grinchHealth: 0
-  santa: {fileID: 2099657825}
   miniStorms: []
-  santa: {fileID: 0}
+  santa: {fileID: 2099657825}
 --- !u!4 &2029612040
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ TagManager:
   - Grinch
   - Terrain
   - Storm
+  - errores
   layers:
   - Default
   - TransparentFX
