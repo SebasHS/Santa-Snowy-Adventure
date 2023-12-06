@@ -16,6 +16,9 @@ public class ToyManager : MonoBehaviour
     public AudioSource EatCookie;
     public AudioSource nextLevel;
      
+    public GameObject grinch;
+
+    public int grinchHealth;
     
 
     public static ToyManager Instance { get; private set; }
@@ -50,6 +53,10 @@ public class ToyManager : MonoBehaviour
             case 2:
                 listaPorObtener = new List<string> { "ToySkate", "ToyBear", "ToySkate", "ToyBear", "ToyBall" };
                 break;
+            case 3:
+                grinch.SetActive(true);
+                grinchHealth = 20; //20 hits
+                break;
             default:
                 break;
         }
@@ -64,7 +71,7 @@ public class ToyManager : MonoBehaviour
             listaPorObtener.Remove(toy);
             listaObtenida.Add(toy);
         }
-        if(listaPorObtener.Count == 0)
+        if(listaPorObtener.Count == 0 && nivel != 3)
         {
             Debug.Log("Next level!");
             nextNivel();
