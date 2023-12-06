@@ -18,11 +18,13 @@ public class ToyManager : MonoBehaviour
     public AudioSource getGift;
     public AudioSource EatCookie;
     public AudioSource nextLevel;
-     
+
     public GameObject grinch;
     public GameObject CanvasUI;
 
     public int grinchHealth;
+    public GameObject[] miniStorms;
+
 
     public Animator santa;
     
@@ -31,11 +33,12 @@ public class ToyManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        nextNivel();
     }
 
     void Start()
     {
-        nextNivel();
+        StormDisable();
     }
 
     // Update is called once per frame
@@ -55,7 +58,23 @@ public class ToyManager : MonoBehaviour
         }
     }
 
+    public void StormDisable()
+    {
+        miniStorms = GameObject.FindGameObjectsWithTag("Storm");
+        for (int i = 0; i < miniStorms.Length; i++)
+        {
+            miniStorms[i].SetActive(false);
+        }
+    }
 
+    public void StormEnable()
+    {
+        //miniStorms = GameObject.FindGameObjectsWithTag("Storm");
+        for (int i = 0; i < miniStorms.Length; i++)
+        {
+            miniStorms[i].SetActive(true);
+        }
+    }
 
     public void nextNivel()
     {
@@ -72,7 +91,8 @@ public class ToyManager : MonoBehaviour
                 break;
             case 3:
                 grinch.SetActive(true);
-                grinchHealth = 20; //20 hits
+                grinchHealth = 100; //20 hits
+                StormEnable();
                 break;
             default:
                 break;
@@ -89,7 +109,7 @@ public class ToyManager : MonoBehaviour
             listaPorObtener.Remove(toy);
             listaObtenida.Add(toy);
         }
-        if(listaPorObtener.Count == 0 && nivel != 3)
+        if (listaPorObtener.Count == 0 && nivel != 3)
         {
             Debug.Log("Next level!");
             nextNivel();
@@ -99,7 +119,7 @@ public class ToyManager : MonoBehaviour
     public void OneUP()
     {
         EatCookie.Play();
-        if(vida < 3)
+        if (vida < 3)
         {
             vida++;
         }
@@ -110,8 +130,8 @@ public class ToyManager : MonoBehaviour
         santa.SetBool("IsFalling", true);
         hurt.Play();
         vida--;
-       
-        if(vida == 0)
+
+        if (vida == 0)
         {
             //ANGELO AQUI PANTALLA DE MUERTE
             Debug.Log("Death");
