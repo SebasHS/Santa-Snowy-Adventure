@@ -37,7 +37,7 @@ public class ToyMove : MonoBehaviour
       ToyManager.Instance.OneUP();
       Destroy(gameObject);
     }
-    if (collision.name == "Santa")
+    else if (collision.name == "Santa")
     {
       Debug.Log("Entra: " + this.name);
       ToyManager.Instance.QuitardeLista(this.name);
