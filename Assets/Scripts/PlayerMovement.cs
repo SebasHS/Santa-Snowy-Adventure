@@ -54,12 +54,13 @@ public class PlayerMovement : MonoBehaviour
             data.x
         );
     }
+    private bool isThrowing = false;
     private void OnFire(InputValue value)
     {
         // Acceder al Animator y establecer el parámetro IsThrowing a true
         santa.SetBool("IsThrowing", true);
         StartCoroutine(ResetThrowingParameter(0.7f));
-        StartCoroutine(ThrowBall(0.4f));
+        StartCoroutine(ThrowBall());
     }
     private IEnumerator ResetThrowingParameter(float tiempo)
     {
@@ -67,10 +68,37 @@ public class PlayerMovement : MonoBehaviour
         santa.SetBool("IsThrowing", false);
     }
 
-    private IEnumerator ThrowBall(float tiempo)
+    private IEnumerator ThrowBall()
     {
-        yield return new WaitForSeconds(tiempo);
+        // Marcar que estamos en el proceso de lanzamiento
+        isThrowing = true;
+        yield return new WaitForSeconds(0.4f);
         //Instanciar bombPrefab
+        // Obtener la posición del mouse en el mundo
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            // Calcular la dirección hacia el punto seleccionado
+            Vector3 throwDirection = (hit.point - hand.position).normalized;
+            // Ajustar el ángulo de lanzamiento
+            float throwAngle = 10f; // Ajusta el ángulo según sea necesario
+            // Calcular la dirección con el ángulo de lanzamiento
+            throwDirection = Quaternion.AngleAxis(throwAngle, Vector3.Cross(throwDirection, Vector3.up)) * throwDirection;
+            // Instanciar el bombPrefab con posición relativa al padre (hand)
+            GameObject bomb = Instantiate(bombPrefab, hand.position, Quaternion.identity);
+
+            // Obtener el componente Rigidbody del bombPrefab
+            Rigidbody bombRb = bomb.GetComponent<Rigidbody>();
+            // Aplicar fuerza al Rigidbody para lanzar la bomba hacia el punto seleccionado con ángulo
+            float throwForce = 20f; // Ajusta la fuerza según sea necesario
+            bombRb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+        }
+        yield return new WaitForSeconds(0.2f);
+        // Marcar que hemos terminado el proceso de lanzamiento
+        isThrowing = false;
+        // Desactivar la animación
+        santa.SetBool("IsThrowing", false);
     }
 
     private void OnLook(InputValue value)
