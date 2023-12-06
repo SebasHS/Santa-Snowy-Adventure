@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class ToyManager : MonoBehaviour
 {
@@ -27,6 +30,10 @@ public class ToyManager : MonoBehaviour
 
 
     public Animator santa;
+
+    public int sceneNum;
+
+    private bool esperandoVictoria = false;
     
 
     public static ToyManager Instance { get; private set; }
@@ -39,6 +46,7 @@ public class ToyManager : MonoBehaviour
     void Start()
     {
         StormDisable();
+        //Debug.Log("NIVEL: "+nivel);
     }
 
     // Update is called once per frame
@@ -113,9 +121,15 @@ public class ToyManager : MonoBehaviour
         if (listaPorObtener.Count == 0 && nivel != 3)
         {
             Debug.Log("Next level!");
+            //Cambiar a VictoryScene, esta debe estar durante 5 segundos y luego se debe volver a esta escena actual 
+            //nextNivel();
+            //EsperaParaVictoria(2.0f);
+            //StartCoroutine(TransicionVictoria(2.0f));
             nextNivel();
         }
     }
+
+
 
     public void OneUP()
     {
@@ -149,4 +163,5 @@ public class ToyManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         santa.SetBool("IsRecovering", false);
     }
+    
 }
