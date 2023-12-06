@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System;
+using UnityEngine.SceneManagement;
 
 public class Dialogo : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class Dialogo : MonoBehaviour
     // public GameObject weaponUI;
 
     private float typingTime = 0.05f;
+    
+    [SerializeField] private String escena;
     private void Start()
     {
         dialoguePanel.SetActive(false);
@@ -61,6 +65,10 @@ public class Dialogo : MonoBehaviour
             dialoguePanel.SetActive(false);
             // weaponUI.SetActive(true);
             Time.timeScale = 1f;
+            if(escena != ""){
+                SceneManager.LoadScene(escena, LoadSceneMode.Single);
+            }
+            
         }
     }
 
