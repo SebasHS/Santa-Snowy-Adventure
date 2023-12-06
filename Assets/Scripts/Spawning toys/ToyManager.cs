@@ -92,6 +92,7 @@ public class ToyManager : MonoBehaviour
                 break;
             case 2:
                 listaPorObtener = new List<string> { "ToySkate", "ToyBear", "ToySkate", "ToyBear", "ToyBall" };
+                CanvasUI.GetComponent<InGameUIManager>().LoadRegalosUI( listaPorObtener);
                 break;
             case 3:
                 grinch.SetActive(true);
@@ -110,9 +111,10 @@ public class ToyManager : MonoBehaviour
         if (listaPorObtener.Contains(toy))
         {
             Debug.Log("Grabbed: " + toy);
-            CanvasUI.GetComponent<InGameUIManager>().TacharRegaloUI(toy);
+            
             listaPorObtener.Remove(toy);
             listaObtenida.Add(toy);
+            CanvasUI.GetComponent<InGameUIManager>().TacharRegaloUI(toy);
         }
         if (listaPorObtener.Count == 0 && nivel != 3)
         {

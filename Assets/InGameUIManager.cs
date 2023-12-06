@@ -48,7 +48,7 @@ public class InGameUIManager : MonoBehaviour
         Debug.Log(RegalosRecoger[index]);
         if (index != -1)
         {
-            RegalosRecoger[index] = "R" + RegalosRecoger[index];
+           // RegalosRecoger[index] = "R" + RegalosRecoger[index];
             Debug.Log(RegalosRecoger[index]);
             writeRegalos();
         }}
