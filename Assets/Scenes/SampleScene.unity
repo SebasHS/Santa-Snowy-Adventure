@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 733f7d8a491e84cc5bab761323e9a1cb, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,7 +218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &131665905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -124}
+  m_AnchoredPosition: {x: -623, y: -124}
   m_SizeDelta: {x: 140, y: 49.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270123505
@@ -672,7 +672,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MenuScene
+          m_StringArgument: PENDIENTE
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &270123506
@@ -832,7 +832,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6ac5e4ef24110f840ba38a3bdf302a87, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.48
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1501,7 +1501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 288, y: 311}
+  m_AnchoredPosition: {x: 290, y: 150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477622331
@@ -1976,7 +1976,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ea4ff4a1c3c4c7c4695d943f32f7029b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5747430a459c4b045bc181cf8254557a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2453,7 +2453,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 15c5a1e0ee23e7442b941c878cda9cda, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9fb3b202347a4e64b9ecef9af26cba10, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3154,7 +3154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.295}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -996, y: 135.99997}
+  m_AnchoredPosition: {x: -994, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986772325
@@ -3381,7 +3381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -3}
+  m_AnchoredPosition: {x: -33, y: -170}
   m_SizeDelta: {x: 140, y: 49.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087203552
@@ -3570,7 +3570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1093266273
 Transform:
   m_ObjectHideFlags: 0
@@ -3660,7 +3660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 158}
+  m_AnchoredPosition: {x: -623, y: 158}
   m_SizeDelta: {x: 140, y: 49.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119081866
@@ -3793,7 +3793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.000013, y: -229.00003}
+  m_AnchoredPosition: {x: -33, y: -396}
   m_SizeDelta: {x: 140, y: 49.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253823274
@@ -4040,7 +4040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1402801867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4159,7 +4159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1492312844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4752,7 +4752,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9957f226e58a1b6419d43d8a20e862b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6cb538c63ab2f1243b3ea2564d315372, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4922,7 +4922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -400}
+  m_AnchoredPosition: {x: -623, y: -400}
   m_SizeDelta: {x: 140, y: 49.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855301043
@@ -5199,6 +5199,9 @@ MonoBehaviour:
   grinch: {fileID: 1093266272}
   CanvasUI: {fileID: 715600409}
   grinchHealth: 0
+  santa: {fileID: 2099657825}
+  miniStorms: []
+  santa: {fileID: 0}
 --- !u!4 &2029612040
 Transform:
   m_ObjectHideFlags: 0
@@ -5387,8 +5390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41.985996, y: 1}
-  m_SizeDelta: {x: 3071.027, y: 980}
+  m_AnchoredPosition: {x: 2, y: 1}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061057405
 MonoBehaviour:
@@ -5403,7 +5406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5849056, g: 0.041384827, b: 0.13836426, a: 0.94509804}
+  m_Color: {r: 0.5849056, g: 0.041384827, b: 0.13836426, a: 0.87058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
