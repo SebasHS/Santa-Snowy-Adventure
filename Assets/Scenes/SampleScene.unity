@@ -3844,7 +3844,7 @@ MonoBehaviour:
   santa: {fileID: 878039968}
   x: 0
   y: -50
-  z: 30
+  z: -500
 --- !u!65 &1238189264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3860,7 +3860,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5332,6 +5332,7 @@ MonoBehaviour:
   grinchHealth: 0
   miniStorms: []
   santa: {fileID: 2099657825}
+  sceneNum: 0
 --- !u!4 &2029612040
 Transform:
   m_ObjectHideFlags: 0
