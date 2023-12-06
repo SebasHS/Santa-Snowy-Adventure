@@ -110,6 +110,7 @@ public class ToyManager : MonoBehaviour
         if (listaPorObtener.Contains(toy))
         {
             Debug.Log("Grabbed: " + toy);
+            CanvasUI.GetComponent<InGameUIManager>().TacharRegaloUI(toy);
             listaPorObtener.Remove(toy);
             listaObtenida.Add(toy);
         }
