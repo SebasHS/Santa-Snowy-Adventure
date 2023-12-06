@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator santa;
 
+    public AudioSource bg;
+
     
 
     
