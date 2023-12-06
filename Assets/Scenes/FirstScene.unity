@@ -4023,6 +4023,7 @@ MonoBehaviour:
     que recuperarlo Jefe!
   - "SANTA CLAUS - Eso esta clar\xEDsimo, tr\xE1eme mi tabla de snowboard Dobby"
   - ELFO - A la orden jefe
+  escena: SampleScene
 --- !u!1001 &2125539449
 PrefabInstance:
   m_ObjectHideFlags: 0
