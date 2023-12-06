@@ -9,7 +9,15 @@ public class ToyMove : MonoBehaviour
   [SerializeField] public int x, y, z;
   void Start()
   {
-    speed = 27;
+    if(this.name == "Cookie")
+    {
+      Debug.Log("Less speed: Cookie");
+      speed = 0;
+    }
+    else
+    {
+      speed = 27;
+    }
   }
 
   private void FixedUpdate()
@@ -31,6 +39,12 @@ public class ToyMove : MonoBehaviour
 
   void OnTriggerEnter(Collider collision)
   {
+    if(this.name == "Cookie")
+    {
+      Debug.Log("Cookie - 1UP");
+      ToyManager.Instance.OneUP();
+      Destroy(gameObject);
+    }
     if (collision.name == "Santa")
     {
       Debug.Log("Entra: " + this.name);

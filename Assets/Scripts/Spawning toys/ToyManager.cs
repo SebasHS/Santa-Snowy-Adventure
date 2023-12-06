@@ -8,6 +8,7 @@ public class ToyManager : MonoBehaviour
     public List<string> listaObtenida = new List<string>();
     public List<string> listaPorObtener = new List<string>();
     public int nivel = 0;
+    public int vida = 3;
 
     public static ToyManager Instance { get; private set; }
     private void Awake()
@@ -38,7 +39,7 @@ public class ToyManager : MonoBehaviour
                 listaPorObtener = new List<string> { "ToyBall(Clone)", "ToyBall(Clone)", "ToySkate(Clone)", "ToyBear(Clone)" };
                 break;
             case 2:
-                listaPorObtener = new List<string> { "Toy(Clone)", "ToySkate(Clone)", "ToyBear(Clone)", "ToySkate(Clone)", "ToyBear(Clone)", "ToyBall(Clone)" };
+                listaPorObtener = new List<string> { "ToySkate(Clone)", "ToyBear(Clone)", "ToySkate(Clone)", "ToyBear(Clone)", "ToyBall(Clone)" };
                 break;
             default:
                 break;
@@ -59,5 +60,24 @@ public class ToyManager : MonoBehaviour
             nextNivel();
         }
     }
+
+    public void OneUP()
+    {
+        if(vida < 3)
+        {
+            vida++;
+        }
+    }
+
+    public void gotHit()
+    {
+        vida--;
+        if(vida == 0)
+        {
+            //ANGELO AQUI PANTALLA DE MUERTE
+            Debug.Log("Death");
+        }
+    }
+
 
 }
