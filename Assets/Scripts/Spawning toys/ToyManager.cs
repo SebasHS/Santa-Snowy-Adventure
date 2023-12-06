@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class ToyManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<string> listaObtenida = new List<string>();
     public List<string> listaPorObtener = new List<string>();
+
     public int nivel = 0;
     public int vida = 3;
     public Image[] hearts;
@@ -28,6 +30,7 @@ public class ToyManager : MonoBehaviour
 
     public Animator santa;
     
+    [SerializeField] private GameObject deathCanvas;
 
     public static ToyManager Instance { get; private set; }
     private void Awake()
@@ -131,13 +134,24 @@ public class ToyManager : MonoBehaviour
         santa.SetBool("IsFalling", true);
         hurt.Play();
         vida--;
+        Debug.Log("Vida actual: " + vida); 
 
         if (vida == 0)
         {
-            //ANGELO AQUI PANTALLA DE MUERTE
+            Debug.Log("Death - Activando canvas de muerte");
+            deathCanvas.SetActive(true); 
+            Time.timeScale = 0;
+            StartCoroutine(WaitAndLoadMenu());
             Debug.Log("Death");
         }
         StartCoroutine(DesFall());
+    }
+
+    private IEnumerator WaitAndLoadMenu()
+    {
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(5); // Espera 5 segundos
+        SceneManager.LoadScene("MenuScene"); // Cambia a la escena del menú principal
     }
 
     
