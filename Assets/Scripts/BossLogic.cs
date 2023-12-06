@@ -19,16 +19,5 @@ public class BossLogic : MonoBehaviour
         this.transform.position = santa.transform.TransformPoint(x, y, z);
     }
 
-    void OnTriggerEnter(Collider collision)
-    {
-        Debug.Log("Grinch hit: " + collision.name);
-        if(collision.name == "Bomb(Clone)")
-        {
-            ToyManager.Instance.grinchHealth--;
-            if(ToyManager.Instance.grinchHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
+
 }
